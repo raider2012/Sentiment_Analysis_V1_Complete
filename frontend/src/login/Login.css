@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+.Login {
+  text-align: center;
+}
+
+.Login-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Login-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.Login-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Login-link {
+  color: #61dafb;
+}
+
+@keyframes Login-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+  background-size: 600% 600%;
+  animation: gradientAnimation 20s ease infinite;
+  z-index: -2;
+}
+
+.background::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.1) 2px, rgba(255,255,255,0.1) 4px),
+              repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255,255,255,0.1) 2px, rgba(255,255,255,0.1) 4px);
+  transform: translate(-50%, -50%) rotateX(45deg) scale(1.2);
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes gradientAnimation {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/*Main Container Section */
+.login-container {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  transform: perspective(1000px) translateZ(0);
+  }
+  
+  .login-container h1 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .form-group label {
+    display: block;
+    width: 80%;  
+    margin-bottom: 5px;
+    font-weight: 600;
+    text-align: left; 
+  }
+  
+  .form-group input {
+    width: 80%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .error {
+    color: red;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    transition: transform 0.3s ease;
+    transform: perspective(1000px) translateZ(0);
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+}
+
+h1, h2 {
+  transform: perspective(1000px) translateZ(0);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background: #f0f0f0;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: left;
+  max-width: 90%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transform: perspective(1000px) translateZ(0);
+}
+
+/* Modal Section */
+.create-account-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.create-account-popup {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  width: 300px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.close-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: rgb(255, 0, 0);
+  z-index: 101;
+}
+
+.create-account-toggle {
+  margin-top: 15px;
+  background: none;
+  border: none;
+  color: #1a73e8;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.9em;
+}
