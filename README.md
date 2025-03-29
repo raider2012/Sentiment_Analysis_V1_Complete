@@ -5,8 +5,10 @@ To Host it on live servers, make sure you have atleast 1 Gb Memory available for
 
 #Installation and Setup
 
-Prerequisites
+Prerequisites:
+
 Node.js: Install from [nodejs.org](https://nodejs.org/).
+
 Python 3.8+: Download from [python.org](https://www.python.org/).
 
 ### Frontend (React)
